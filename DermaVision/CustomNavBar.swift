@@ -21,7 +21,7 @@ struct CustomNavBar: View{
             Text(currentPage.rawValue)
                         .font(.custom("Georgia", size: 24, relativeTo: .title))
                         .fontWeight(.bold)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color(red: 0.1, green: 0.25, blue: 0.6))
                         .frame(maxWidth: .infinity, alignment: .center)
 
                     // Nav Buttons

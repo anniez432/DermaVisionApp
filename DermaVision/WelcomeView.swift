@@ -19,13 +19,15 @@ struct WelcomeView: View {
                     .padding(10)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .multilineTextAlignment(.center)
+                    .foregroundColor(Color(red: 0.1, green: 0.25, blue: 0.6))
                 Button("Let's go!"){
                     started = true
                 }
                 .padding()
                 .buttonStyle(.borderedProminent)
                 .font(Font.custom("SansSerif", size: 20))
-            }
+                .tint(Color(red: 0.1, green: 0.25, blue: 0.6))
+                }
         }
     }
 }
