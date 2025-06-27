@@ -8,8 +8,8 @@ import SwiftUI
 
 struct ProfessionalGuidanceView: View {
     var body: some View {
-        Text("Professional Guidance")
-            .navigationTitle("Professional Guidance")
+        Text("Guidance")
+            .navigationTitle("Guidance")
     }
 }
 

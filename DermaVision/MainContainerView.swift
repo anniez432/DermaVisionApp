@@ -9,17 +9,23 @@ import SwiftUI
 
 struct MainContainerView: View {
     @State private var currentPage: Page = .HowItWorks
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         VStack(spacing: 0){
+            
             CustomNavBar(currentPage: $currentPage)
-                .padding()
-            Spacer(minLength: 10)
+                .padding(10)  // padding inside color
+                .frame(maxWidth: .infinity)
+                .background(Color(red: 0.1, green: 0.25, blue: 0.6)
+                    .ignoresSafeArea(edges: .top))
+            
+            //Spacer(minLength: 10)
             Divider()
             
             ZStack {
                 Color(red: 0.94, green: 0.97, blue: 1.0)
-                    .edgesIgnoringSafeArea(.all)
+                    .ignoresSafeArea()
                 VStack{
                     VStack{
                         switch currentPage{
@@ -38,13 +44,13 @@ struct MainContainerView: View {
                     .padding()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            
+    
         }    }
 }
 
 enum Page: String, CaseIterable{
     case HowItWorks = "How It Works"
     case SkinAnalysis = "Skin Analysis"
-    case ProfessionalGuidance = "Professional Guidance"
+    case ProfessionalGuidance = "Guidance"
     case AboutUs = "About Us"
 }

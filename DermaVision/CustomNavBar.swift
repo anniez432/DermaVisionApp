@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CustomNavBar: View{
     @Binding var currentPage: Page
+    @Environment(\.colorScheme) var colorScheme
     var body: some View{
         VStack(spacing: 12) {
                     // Logo
@@ -33,7 +34,7 @@ struct CustomNavBar: View{
                                 Text(page.rawValue)
                                     .font(Font.custom("Georgia", size: 14, relativeTo: .body))
                                     .underline(currentPage == page)
-                                    .foregroundColor(currentPage == page ? .blue : .primary)
+                                    .foregroundColor(colorScheme == .dark ? .black : Color(red: 0.1, green: 0.25, blue: 0.6))
                                     .frame(maxWidth: .infinity, alignment: .center)
                             }
                             .buttonStyle(PlainButtonStyle())
@@ -43,8 +44,7 @@ struct CustomNavBar: View{
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
-                .background(Color.white)
-    }
+                .background(.white)    }
     
 }
 
