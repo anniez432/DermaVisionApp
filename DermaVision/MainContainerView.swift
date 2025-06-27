@@ -21,15 +21,17 @@ struct MainContainerView: View {
                 Color(red: 0.94, green: 0.97, blue: 1.0)
                     .edgesIgnoringSafeArea(.all)
                 VStack{
-                    switch currentPage{
-                    case .HowItWorks: HowItWorksView()
-                    case .SkinAnalysis: SkinAnalysisView()
-                    case .ProfessionalGuidance: ProfessionalGuidanceView()
-                    case .AboutUs: AboutUsView()
+                    VStack{
+                        switch currentPage{
+                        case .HowItWorks: HowItWorksView()
+                        case .SkinAnalysis: SkinAnalysisView()
+                        case .ProfessionalGuidance: ProfessionalGuidanceView()
+                        case .AboutUs: AboutUsView()
+                        }
                     }
                 }
-                Spacer()
                     .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.white)
                     .cornerRadius(20)
                     .shadow(radius: 4)

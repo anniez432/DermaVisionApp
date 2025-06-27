@@ -9,7 +9,14 @@ import SwiftUI
 
 struct SkinAnalysisView: View {
     var body: some View {
-        Text("Skin Analysis")
-            .navigationTitle("Skin Analysis")
+        VStack{
+            Text("Skin Analysis")
+            Text("Hello")
+        }
+        .navigationTitle("Skin Analysis")
     }
+}
+
+#Preview{
+    WelcomeView()
 }
