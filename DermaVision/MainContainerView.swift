@@ -15,13 +15,14 @@ struct MainContainerView: View {
         VStack(spacing: 0){
             
             CustomNavBar(currentPage: $currentPage)
-                .padding(10)  // padding inside color
+                .padding(.horizontal, 20)  // padding inside color
+                .padding(.bottom, 5)
                 .frame(maxWidth: .infinity)
-                .background(Color(red: 0.1, green: 0.25, blue: 0.6)
-                    .ignoresSafeArea(edges: .top))
+                .background(Color(red: 0.94, green: 0.97, blue: 1.0)
+                    .ignoresSafeArea(edges: .top)).shadow(radius: 4)
             
             //Spacer(minLength: 10)
-            Divider()
+            //Divider()
             
             ZStack {
                 Color(red: 0.94, green: 0.97, blue: 1.0)
